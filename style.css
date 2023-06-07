@@ -1,0 +1,353 @@
+@import url("https://db.onlinewebfonts.com/c/97c4b25dc74e0ab045154e75a8fdd69d?family=Game+of+Thrones");
+
+* {
+  font-family: "Game of Thrones", serif;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.table {
+  background-image: url(./assets/site/mapblue.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.tabble__characters {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(8, auto);
+  grid-template-rows: repeat(6, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+}
+
+.character__image {
+  width: 5em;
+  height: 5em;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.character__name {
+  font-size: 0.8em;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  background-color: rgb(57, 57, 58);
+  width: 30vw;
+  height: 100%;
+}
+
+.header {
+  color: #ffffff;
+  font-size: 1.2em;
+  letter-spacing: 0.3em;
+  text-align: center;
+}
+
+.search__container__bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  margin-bottom: 3em;
+  width: 90%;
+}
+
+.fa-solid {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.fa-magnifying-glass {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 1.2rem;
+  border-radius: 4px 0 0 4px;
+  padding: 0.375rem 0.75rem;
+  color: rgb(57, 57, 58);
+  margin-right: -0.21em;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0.5em 0.7em;
+  cursor: pointer;
+}
+
+.searcher {
+  border-radius: 0 4px 4px 0;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.1rem;
+  border: 2px solid #ffffff;
+  outline: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.search__container__bottom__search {
+  display: flex;
+  margin-right: 1em;
+}
+
+.shadow,
+.character__image:hover {
+  box-shadow: 0 0 2em rgb(33, 33, 33);
+}
+
+.characterinfo__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  margin-top: -20em;
+  height: 20em;
+}
+
+.characterinfo__container__img {
+  width: 22vw;
+  height: 25vh;
+  border: solid 0.2em rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+}
+
+.characterinfo__container__nameAndHouse {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  width: 40vh;
+}
+
+.characterinfo__container__name {
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+  margin-left: 0.5em;
+}
+
+.characterinfo__container__house {
+  margin-right: 0.5em;
+}
+
+.characterinfo__container__info {
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  width: 80%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1700px) {
+  .searcher {
+    border-radius: 0 4px 4px 0;
+    padding: 0;
+    font-size: 1rem;
+    border: 2px solid #ffffff;
+    outline: none;
+  }
+  .fa-angle-right,
+  .fa-angle-left {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 0.5em 0.7em;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .characterinfo__container__nameAndHouse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-content: stretch;
+    align-items: center;
+    width: 20vh;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .tabble__characters {
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(8, auto);
+  }
+  .searcher {
+    border-radius: 0 4px 4px 0;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+    border: 2px solid #ffffff;
+    outline: none;
+  }
+
+  .fa-angle-right,
+  .fa-angle-left {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 200vh;
+  }
+
+  .table {
+    height: 200vh;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    background-color: rgb(57, 57, 58);
+    width: 100vw;
+    height: 150vh;
+  }
+
+  .fa-angle-right,
+  .fa-angle-left {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .tabble__characters {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(10, auto);
+  }
+
+  aside {
+    display: none;
+  }
+
+  .table {
+    height: 300vh;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 300vh;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    background-color: rgb(57, 57, 58);
+    width: 100vw;
+    height: 150vh;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tabble__characters {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(12, auto);
+  }
+
+  .table {
+    height: 500vh;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 400vh;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    background-color: rgb(57, 57, 58);
+    width: 100vw;
+    height: 150vh;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .tabble__characters {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(13, auto);
+  }
+
+  .table {
+    height: 800vh;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 800vh;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    background-color: rgb(57, 57, 58);
+    width: 100vw;
+    height: 150vh;
+  }
+}
